@@ -1,7 +1,6 @@
 <?php
-
-$dsn = "mysql:host=192.168.32.90;dbname=dbname01";
-$db = new PDO($dsn, "dbname01","dbname@pwd");
+$dsn = "mysql:host=localhost;dbname=1";
+$db = new PDO($dsn, "root","");
 $rs =$db->query("SELECT * FROM users WHERE account = '$_POST[name]' and password = '$_POST[password]'  ");
 $result = $rs ->fetch();
 if ($result){
